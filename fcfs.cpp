@@ -36,9 +36,30 @@ vector<int> waitingTime(vector<string> processID, vector<int> burstTime, vector<
 }
 
 int main() {
-    vector<string> processID{"P1", "P2", "P3", "P4", "P5"};
-    vector<int> arrivalTime{0,1,2,3,4};
-    vector<int> burstTime{2, 3, 5, 4, 6};
+    vector<string> processID;
+    vector<int> arrivalTime;
+    vector<int> burstTime;
+
+    string pid;
+    int at, bt;
+
+    cout<<"Enter the process IDs"<<endl;
+    for(int i = 0; i < 5; i++) {
+        cin>>pid;
+        processID.push_back(pid);
+    }
+
+    cout<<"Enter the arrival times for each process"<<endl;
+    for(int i = 0; i < 5; i++) {
+        cin>>at;
+        arrivalTime.push_back(at);
+    }
+
+    cout<<"Enter the burst times for each process"<<endl;
+    for(int i = 0; i < 5; i++) {
+        cin>>bt;
+        burstTime.push_back(bt);
+    }
 
     vector<int> compl_time = completionTime(processID, arrivalTime, burstTime);
     vector<int> tat_time = turnAroundTime(processID, arrivalTime, compl_time);
