@@ -1,4 +1,3 @@
-/***** First Program ******/
 //To read number of characters, numbers blank spaces etc. in a file
 
 #include<bits/stdc++.h>
